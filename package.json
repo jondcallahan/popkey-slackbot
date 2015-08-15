@@ -1,0 +1,13 @@
+{
+  "name": "popkey_slackbot",
+  "version": "0.0.1",
+  "description": "A slackbot that responds with a gif from popkey.co",
+  "main": "app.js",
+  "author": "Jon Callahan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "xmlhttprequest": "^1.7.0"
+  }
+}
