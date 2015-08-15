@@ -14,7 +14,7 @@ module.exports = function (req, res, next) {
             gifArray.push(gifURL);
           });
           var randomGIF = gifArray[Math.floor(Math.random() * gifArray.length)];
-          return res.status(200).json({'text': randomGIF});
+          return res.status(200).send(randomGIF);
 
     }
   });
