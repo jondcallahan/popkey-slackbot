@@ -1,0 +1,6 @@
+{
+  "name": "PopKey Slack bot",
+  "description": "A webhook receiver that returns a random gif from PopKey to be used with Slack.",
+  "repository": "https://github.com/jondcallahan/popkey-slackbot.git",
+  "keywords": ["slack", "popkey", "slackbot", "slack gif"]
+}
