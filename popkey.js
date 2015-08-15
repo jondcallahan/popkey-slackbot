@@ -18,7 +18,7 @@ module.exports = function (req, res, next) {
          // return res.status(200).send(randomGIF);
 
     }
-    return res.status(200).send(userText);
+    return res.status(200).json({'text': userText});
   });
 };
 
