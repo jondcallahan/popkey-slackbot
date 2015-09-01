@@ -1,0 +1,28 @@
+<style type="text/css">
+	body {
+		background-color:azure;
+		font-family: Helvetica;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	hr {
+		border-color: tomato;
+		width: 80%;
+	}
+</style>
+
+<body>
+	<h2>
+		<hr>
+		<center>To use the popkey slack integration, add an outgoing webhook with the URL:
+			<br /><br />
+			<span id="url"></span>
+		</center>
+		<hr>
+	</h2>
+</body>
+<script type="text/javascript">
+	var urlContainer = document.getElementById('url');
+	urlContainer.innerHTML = document.location.origin;
+</script>
