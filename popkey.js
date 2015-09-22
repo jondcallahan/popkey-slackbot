@@ -2,7 +2,7 @@ module.exports = function (req, res, next) {
   var userText = req.body.text;
   var userTrigger = req.body.trigger_word;
   var searchTerm = userText.replace(userTrigger+' ', '');
-  var popSearchURL = 'http://popkey.co/search/' + encodeURI(searchTerm);
+  var popSearchURL = 'https://popkey.co/search/' + encodeURI(searchTerm);
   var cheerio = require('cheerio');
   var request = require('request');
   request(popSearchURL, function (error, response, html) {
@@ -12,7 +12,7 @@ module.exports = function (req, res, next) {
           $('.js-image').each(function(i, element){
             var img = $(this);
             var gif = img.attr('data-animated');
-            var gifURL = 'http:' + gif;
+            var gifURL = gif;
             gifArray.push(gifURL);
           });
           var randomGIF = gifArray[Math.floor(Math.random() * gifArray.length)];
