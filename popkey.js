@@ -16,8 +16,13 @@ module.exports = function (req, res, next) {
             gifArray.push(gifURL);
           });
           var randomGIF = gifArray[Math.floor(Math.random() * gifArray.length)];
-          return res.status(200).json({'text': randomGIF});
 
+          if (!randomGIF) {
+            randomGIF = 'No results found, yo!';
+          } else if ( gifArray.length == 1) {
+            randomGIF += ' // Only one GIF found for that search.'; 
+          }
+          return res.status(200).json({'text': randomGIF});
     }
   });
 };
