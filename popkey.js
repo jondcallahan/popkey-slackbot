@@ -20,10 +20,9 @@ module.exports = function (req, res, next) {
           if (!randomGIF) {
             randomGIF = 'No results found, yo!';
           } else if ( gifArray.length == 1) {
-            return res.status(200).json({'text': randomGIF + ' // Only one GIF found for that search.'});  
-          } else {
+            randomGIF += ' // Only one GIF found for that search.'; 
+          }
           return res.status(200).json({'text': randomGIF});
-        }
     }
   });
 };
