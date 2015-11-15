@@ -1,15 +1,30 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var popkey = require('./popkey');
-var url = require('url');
-var app = express();
-var port = process.env.PORT || 3000;
+var express = require('express'),
+	bodyParser = require('body-parser'),
+	popkey = require('./popkey'),
+	slackOauth = require('./slack-oauth.js'),
+	url = require('url'),
+	app = express(),
+	port = process.env.PORT || 3000;
+require('dotenv').load();
 
 // body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //static file server middleware
-app.use(express.static('public'));
+app.set('views', __dirname + '/public');
+app.set('view engine', 'jade');
+app.use(express.static(__dirname + '/public'));
+
+// get routes for pages
+app.get('/', function(req, res) {
+	res.render('index');
+});
+
+app.get('/greatSuccess', function(req, res) {
+	res.render('success');
+});
+
+app.get('/oauth', slackOauth );
 
 //post route for slack
 app.post('/', popkey );

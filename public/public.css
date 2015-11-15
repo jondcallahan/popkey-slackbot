@@ -1,0 +1,48 @@
+body {
+	background-color:azure;
+	font-family: Lato, Helvetica;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+hr {
+	border-color: tomato;
+	width: 80%;
+}
+a {
+	color: royalblue;
+}
+img{
+	max-width: 90%;
+}
+#url{
+	color: tomato;
+    cursor: pointer;
+}
+
+/* Typed stuff */
+.typed-cursor{
+    opacity: 0.75;
+    color: grey;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		title Wuh oh
+		style.
+			h1 {
+				font-size: 5em;
+				letter-spacing: 0.005em;
+				color: beige;
+				font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
+			}
+			a h1, a h2{
+				transition: all 0.6s ease;
+			}
+			a:hover h1, a:hover h2 {
+				color: cornflowerblue;
+				border-color: gold;
+			}
+			h2 {
+				color: gray;
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+				border: 2px solid beige;
+				border-radius: 5px;
+				padding: 1.25rem 0;
+			}
+	body(style='background-color: coral; height: 100vh; display: flex; align-items: center; justify-content: center;')
+		a(href='/', style='text-decoration: none; text-align: center;')
+			h1 Something's not right...
+			- if (error == 'code_already_used')
+				h2 Womp : <em>Auth Code already used</em>
+			- else
+				h2 Unknown error 👻
