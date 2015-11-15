@@ -19,7 +19,7 @@ module.exports = function (req, res, next) {
             payload = { "text": 'No results found, yo!' };
           } else if ( gifArray.length == 1) {
             payload = { "response_type": "in_channel",
-                        "text": randomGIF + ' // Only one GIF found for that search.',
+                        "text": 'Only one GIF found for that search.',
                         "attachments": [{
                           "fallback": randomGIF,
                           "image_url": randomGIF
@@ -27,7 +27,7 @@ module.exports = function (req, res, next) {
                       };
           } else {
             payload = { "response_type": "in_channel",
-                        "text": randomGIF,
+                        "text": gifArray.length + ' GIFs found for ' + req.body.text,
                         "attachments": [{
                           "fallback": randomGIF,
                           "image_url": randomGIF
