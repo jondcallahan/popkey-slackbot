@@ -10,7 +10,6 @@ module.exports = function (req, res, next) {
       code: req.query.code
 
       }}, function(err,httpResponse,body){ 
-            //console.log(httpResponse);
             resBody = JSON.parse(body);
             console.log('body');
             if ( resBody.ok !== true ) {
